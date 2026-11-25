@@ -202,6 +202,9 @@
 @media (min-width:1000px){.rx{zoom:1.05}}
 @media (min-width:1250px){.rx{zoom:1.12}}
 @media (min-width:1600px){.rx{zoom:1.25}}
+.rx-head{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.rx-head .rx-kv{min-width:0}
+@media (max-width:900px){.rx-head{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .rx-brand{display:flex;align-items:center;gap:14px}
 .rx-logo{height:56px;width:auto;display:block}
 .rx-logo-sep{width:1px;height:36px;background:var(--ln)}
@@ -251,15 +254,14 @@
   </div>
   <div class="rx-main">
     <section class="rx-pane" id="fer">
+      <p class="rx-sec">Valores</p>
       <div class="rx-head">
-        <div class="rx-kv"><span>Gasto por ano</span><strong data-draw="v" data-source="kpi" data-field="custo_anual" data-where="exame=Ferritina" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="kpi" data-field="exames_ano" data-where="exame=Ferritina" data-fmt="int">—</b> exames/ano</small></div>
-        <div class="rx-kv"><span>Preço unitário</span><strong data-draw="v" data-source="rep" data-field="preco" data-where="exame=Ferritina" data-fmt="brl2">—</strong></div>
-        <div class="rx-kv"><span>Exames realizados</span><strong data-draw="v" data-source="por_exame" data-field="exames" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub">jan–out/26</small></div>
-        <div class="rx-kv"><span>Pacientes atendidos</span><strong data-draw="v" data-source="rep" data-field="pacientes" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub">pessoas diferentes · <b data-draw="v" data-source="rep" data-field="pac_sem" data-where="exame=Ferritina" data-fmt="int">—</b> fizeram só 1 (jan–out/26)</small></div>
-        <div class="rx-kv"><span>Pedidos em pacote com outros exames</span><strong data-draw="v" data-source="kpi" data-field="pct_dupla" data-where="exame=Ferritina" data-fmt="pct">—</strong><small class="rx-sub">dos pedidos</small></div>
-        <div class="rx-kv rx-hi"><span>Economia com a regra</span><strong data-draw="v" data-source="sim" data-field="economia_ano" data-where="exame=Ferritina" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="sim" data-field="pct" data-where="exame=Ferritina" data-fmt="pct">—</b> do gasto</small></div>
+        <div class="rx-kv"><span>Gasto por ano</span><strong data-draw="v" data-source="kpi" data-field="custo_anual" data-where="exame=Ferritina" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="preco" data-where="exame=Ferritina" data-fmt="brl2">—</b> por exame</small></div>
+        <div class="rx-kv"><span>Exames realizados</span><strong data-draw="v" data-source="por_exame" data-field="exames" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="kpi" data-field="pct_dupla" data-where="exame=Ferritina" data-fmt="pct">—</b> pedidos junto com outros exames</small></div>
+        <div class="rx-kv"><span>Pacientes atendidos</span><strong data-draw="v" data-source="rep" data-field="pacientes" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="pac_sem" data-where="exame=Ferritina" data-fmt="int">—</b> fizeram só 1 exame</small></div>
+        <div class="rx-kv rx-hi"><span>Economia com a regra</span><strong data-draw="v" data-source="sim" data-field="economia_ano" data-where="exame=Ferritina" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="sim" data-field="pct" data-where="exame=Ferritina" data-fmt="pct">—</b> do gasto por ano</small></div>
       </div>
-      <p class="rx-sec">Repetição</p>
+<p class="rx-sec">Repetição</p>
       <div class="rx-head">
         <div class="rx-kv"><span>Pacientes que repetem</span><strong data-draw="v" data-source="rep" data-field="pac_rep" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="pct_pac_rep" data-where="exame=Ferritina" data-fmt="pct">—</b> dos pacientes</small></div>
         <div class="rx-kv"><span>Exames repetidos</span><strong data-draw="v" data-source="rep" data-field="repeticoes" data-where="exame=Ferritina" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="custo_rep_ano" data-where="exame=Ferritina" data-fmt="short">—</b> por ano</small></div>
@@ -310,15 +312,14 @@
     </section>
 
     <section class="rx-pane" id="b12" hidden>
+      <p class="rx-sec">Valores</p>
       <div class="rx-head">
-        <div class="rx-kv"><span>Gasto por ano</span><strong data-draw="v" data-source="kpi" data-field="custo_anual" data-where="exame=Vitamina B12" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="kpi" data-field="exames_ano" data-where="exame=Vitamina B12" data-fmt="int">—</b> exames/ano</small></div>
-        <div class="rx-kv"><span>Preço unitário</span><strong data-draw="v" data-source="rep" data-field="preco" data-where="exame=Vitamina B12" data-fmt="brl2">—</strong></div>
-        <div class="rx-kv"><span>Exames realizados</span><strong data-draw="v" data-source="por_exame" data-field="exames" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub">jan–out/26</small></div>
-        <div class="rx-kv"><span>Pacientes atendidos</span><strong data-draw="v" data-source="rep" data-field="pacientes" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub">pessoas diferentes · <b data-draw="v" data-source="rep" data-field="pac_sem" data-where="exame=Vitamina B12" data-fmt="int">—</b> fizeram só 1 (jan–out/26)</small></div>
-        <div class="rx-kv"><span>Pedidos em pacote com outros exames</span><strong data-draw="v" data-source="kpi" data-field="pct_dupla" data-where="exame=Vitamina B12" data-fmt="pct">—</strong><small class="rx-sub">dos pedidos</small></div>
-        <div class="rx-kv rx-hi"><span>Economia com a regra</span><strong data-draw="v" data-source="sim" data-field="economia_ano" data-where="exame=Vitamina B12" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="sim" data-field="pct" data-where="exame=Vitamina B12" data-fmt="pct">—</b> do gasto</small></div>
+        <div class="rx-kv"><span>Gasto por ano</span><strong data-draw="v" data-source="kpi" data-field="custo_anual" data-where="exame=Vitamina B12" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="preco" data-where="exame=Vitamina B12" data-fmt="brl2">—</b> por exame</small></div>
+        <div class="rx-kv"><span>Exames realizados</span><strong data-draw="v" data-source="por_exame" data-field="exames" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="kpi" data-field="pct_dupla" data-where="exame=Vitamina B12" data-fmt="pct">—</b> pedidos junto com outros exames</small></div>
+        <div class="rx-kv"><span>Pacientes atendidos</span><strong data-draw="v" data-source="rep" data-field="pacientes" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="pac_sem" data-where="exame=Vitamina B12" data-fmt="int">—</b> fizeram só 1 exame</small></div>
+        <div class="rx-kv rx-hi"><span>Economia com a regra</span><strong data-draw="v" data-source="sim" data-field="economia_ano" data-where="exame=Vitamina B12" data-fmt="short">—</strong><small class="rx-sub"><b data-draw="v" data-source="sim" data-field="pct" data-where="exame=Vitamina B12" data-fmt="pct">—</b> do gasto por ano</small></div>
       </div>
-      <p class="rx-sec">Repetição</p>
+<p class="rx-sec">Repetição</p>
       <div class="rx-head">
         <div class="rx-kv"><span>Pacientes que repetem</span><strong data-draw="v" data-source="rep" data-field="pac_rep" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="pct_pac_rep" data-where="exame=Vitamina B12" data-fmt="pct">—</b> dos pacientes</small></div>
         <div class="rx-kv"><span>Exames repetidos</span><strong data-draw="v" data-source="rep" data-field="repeticoes" data-where="exame=Vitamina B12" data-fmt="int">—</strong><small class="rx-sub"><b data-draw="v" data-source="rep" data-field="custo_rep_ano" data-where="exame=Vitamina B12" data-fmt="short">—</b> por ano</small></div>
