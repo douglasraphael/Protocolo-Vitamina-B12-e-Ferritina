@@ -25,4 +25,5 @@ Uma aba para cada exame (Ferritina e Vitamina B12), com:
 
 - Preços usados: ferritina R$ 22,81 e vitamina B12 R$ 15,51, aplicados a todo o período. Valores anuais = 10 meses × 12/10.
 - A base não separa pedidos da rede própria e da rede externa. Os valores de economia são o máximo possível, considerando toda a demanda sob o protocolo.
+- Exames sem laudo (não realizados) foram retirados da base.
 - Os dados estão agregados, sem nomes de pacientes ou de médicos.
